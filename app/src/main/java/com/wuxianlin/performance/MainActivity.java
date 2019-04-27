@@ -2,10 +2,13 @@ package com.wuxianlin.performance;
 
 import android.app.Activity;
 import android.content.DialogInterface;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewStub;
 import android.view.WindowManager;
 import android.widget.Toast;
 
@@ -22,7 +25,7 @@ public class MainActivity extends Activity {
     private String [] item = {"游戏","运动","电影","旅游","看书"};
     public void dialog_2(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("请选择");
+//        builder.setTitle("Performance v1.1");
         builder.setItems(item, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -38,6 +41,8 @@ public class MainActivity extends Activity {
             }
         });
         AlertDialog alertDialog = builder.create();
+        alertDialog.getListView().setDivider(new ColorDrawable(Color.rgb(99,99,99)));
+        alertDialog.getListView().setDividerHeight(1);
 //        alertDialog.getWindow().setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT);
         alertDialog.show();
     }
