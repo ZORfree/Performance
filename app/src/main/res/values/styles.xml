@@ -1,0 +1,11 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Dialog">
+        <!-- Customize your theme here. -->
+        <!--<item name="android:windowIsFloating">false</item>-->
+        <!--<item name="android:backgroundDimEnabled">true</item>-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+</resources>
